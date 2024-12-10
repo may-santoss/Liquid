@@ -1,0 +1,357 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "icon_stroke_width": 1.2,
+    "section_vertical_spacing": "xs",
+    "product_rating_color": "#1c1c1c",
+    "product_on_sale_accent": "#e32c2b",
+    "product_sold_out_badge_background": "#efefef",
+    "product_custom_badge_background": "#1c1c1c",
+    "success_color": "#307a07",
+    "warning_color": "#ed8a00",
+    "error_color": "#cb2b2b",
+    "heading_font": "libre_franklin_n4",
+    "heading_text_transform": "normal",
+    "heading_font_size_factor": 0.9,
+    "heading_letter_spacing": -1,
+    "text_font": "montserrat_n4",
+    "text_font_size_mobile": 14,
+    "text_font_size_desktop": 14,
+    "text_font_letter_spacing": -1,
+    "button_text_font": "body",
+    "button_text_transform": "uppercase",
+    "button_letter_spacing": 10,
+    "show_page_transition": false,
+    "stagger_products_apparition": false,
+    "stagger_blog_posts_apparition": false,
+    "round_color_swatches": true,
+    "color_swatch_config": "White: white.png\nSand: sand.png\nScarlet: scarlet.png\nMagnolia: magnolia.png\nIvory: ivory.png\nCream:cream.png\nBeige:beige.png\nRaffia: raffia.png\nRaw:raw.png\nTan:tan.png\nColorful:colorful.png\nGreen:green.png\nMint green: mint-green.png  \nMint Green: mint-green.png\nAcqua: acqua.png\nBlue: blue.png\nRoyal blue: royal-blue.png\nRoyal Blue: royal-blue.png\nLavender: lavender.png\nLilac:lilac.png\nBegonia:begonia.png\nPale pink:pale-pink.png\nPale Pink:pale-pink.png\nFuchsia: fuchsia.png\nPink:pink.png\nBright pink: bright-pink.png\nBright Pink: bright-pink.png\nMagenta:magenta.png\nRed: red.png\nWine:wine.png\nGray:gray.png\nSilver:silver.png\nCrystal:crystal.png\nOlive:olive.png\nGold:gold.png\nSun:sun.png\nOchre:ochre.png\nMocha:mocha.png\nMocca:mocca.png\nTobacco:tobacco.png\nCaramel:caramel.png\nTaupe:taupe.png\nBrown:brown.png\nToffee:toffee.png\nDark gray: dark-gray.png\nDark Gray: dark-gray.png\nGraphite:graphite.png\nBlack:black.png\nDisco:disco.png\nZebra: zebra.png\nWhite leaf print: white-leaf-print.png\nWhite Leaf Print: white-leaf-print.png\nBubblegum:bubblegum.png\nBlack and white: black-and-white.png\nBlack and White: black-and-white.png\nBlack and beige: black-and-beige.png\nBlack and Beige: black-and-beige.png\nBlack and natural: black-and-natural.png\nBlack and Natural: black-and-natural.png\nCheetah:cheetah.png\nLeopard: leopard.png\nTartan:tartan.png\nPeacock:peacock.png\nNatural:natural.png\nDeepsea:deepsea.png\nSepia:sepia-raffia.png\nBone:bone.png\nClear Glitter:clear-glitter.png\nBerry: berry.png\nBlack Leaf Print: black-leaf-print.png\nCarmin: carmin.png\nDijon: dijon.png\nEmerald: Emerald.png\nExpresso: expresso.png\nIced: iced.png\nLemon: lemon.png\nMerlot: merlot.png\nMulticolor: multicolor.png\nOlivine: olivine.png\nRose: rose.png\nRouge: rouge.png\nSalted Caramel: salted-caramel.png\nSalted Caramel Custom: salted-caramel-custom.png\nTea: tea.png\nTitanium: titanium.png\nToasted: toasted.png\nMulticolor Dark: multicolor-dark.png\nColorful:colorful.png\nBlush OS: blush-os.png\nCharcoal OSS: charcoal-oss.png\nHeather OSS: heather-oss.png\nSage OS: sage-os.png\nSand OS: sand-os.png\nSea OS:sea-os.png\nLime Icing:lime-icing.png\nNeutral:neutral.png\nTawny:tawny.png\nKiwi:kiwi.png\nViolet:violet.png\nIvory and Multicolor:ivory-and-multicolor.png\nMint:mint.png\nBiscuit:biscuit.png\nGelato:gelato.png\nBuff:buff.png\nQuartz:quartz.png\nMango:mango.png\nPistacchio:pistacchio.png\nTulip:tulip.png\nCharcoal:charcoal.png\nBlush:blush.png\nSand:sand.png\nSage:sage.png\nSea:sea.png\nHeather:heather.png\nLilac:lilac.png\nStone:stone.png\nSea MB:sea-mb.png\nSoleil:soleil.png\nSeas:seas.png\nShine:shine.png\nBlush MO:blush-mo.png\nCharcoal OS:charcoal-os.png\nBlue Gingham:blue-gingham.png\nScarlet:scarlet.png\nBeige:beige.png\nRose Quartz:rose-quartz.png\nButtercream Rib:buttercream-rib.png\nRose Gold:rose-gold.png\nYellow Gold:yellow-gold.png\nMulti:multi.png\nSilver:silver.png\nCaramel:caramel.png\nEspresso:espresso.png\nLight Nude:light-nude.png\nMedium Nude:medium-nude.png\nSmoke:smoke.png\nCadet:cadet.png\nGarnet:garnet.png\nCopper:copper.png\nPutty:putty.png\nClear:clear.png\nNude:nude.png\nMocha:mocha.png\nBlack Rib:black-rib.png\nCream/Black:cream-black.png\nSunshine:sunshine.png\nChestnut:chestnut.png\nBlack/Cream:black-cream.png\nWhite/Hot Pink:white-hot-pink.png\nCream/Pink:cream-pink.png\nNavy/Cream:navy-cream.png\nNavy/White:navy-white.png\nHeather Grey/Pine:heather-grey-pine.png\nHeather Grey/Pink:heather-grey-pink.png\nCanvas/Green:canvas-green.png\nCanvas/Navy:canvas-navy.png\nCandy Stripe:candy-stripe.png\nCream/Navy:cream-navy.png\nHot Pink:hot-pink.png\nCream/Red:cream-red.png\nCharcoal, Blush, Sand:charcoal-blush-sand.png\nGreen Fair Isle:green-fair-isle.jpg\nClover:clover.png\nSea, Sage, Heather:sea-sage-heather.png\nCream Fair Isle:cream-fair-isle.png\nDenim:denim.png\nBeige and Black:beige-and-black.png\nBeige and Floral:beige-and-floral.png\nAzure:azure.png\nPeanut:peanut.png\nPINWHEEL DENIM:pinwheel-denim.png\nPINWHEEL BARN RED:pinwheel-barn-red.png\nVINTAGE FLOWERS INDIGO:vintage-flowers-indigo.png\nCHAMOMILE APRICOT:chamomile-apricot.png\nPRAIRIE INDIGO:prairie-indigo.png\nCHAMOMILE ROSE:chamomile-rose.png\n18k:18k.png\n14k:14k.png\nGERANIUM MILK:geranium-milk.png\nPINWHEEL COTTON:pinwheel-cotton.png\nGERANIUM MIDNIGHT:geranium-midnight.png\nCaribben:caribben.png\nMaya:maya.png\nRainbow:rainbow.png\nEvergreen:evergreen.png\nOrange:orange.png\nWhite Gold:white-gold.png\nMustard:mustard.png\nRose Pink:rose-pink.png\nPistachio:pistachio.png\nNeon Yellow:neon-yellow.png\nLaguna Necklace in White:laguna-necklace-in-white.png\nElectric blue:electric-blue.png\nSky Blue:sky-blue.png\nAli Paisley:ali-paisley.png\nGold Filigree:gold-filigree.png\nRed Gingham:red-gingham.png\nShell:shell.png\nShell Mesh:shell-mesh.png\nTerra Sparkle:terra-sparkle.png\nMap Print:map-print.png\nSunkissed:sunkissed.png\nCoal:coal.png\nJane Print:jane-print.png\nSalt:salt.png\nCitron Multi:citron-multi.png\nSable:sable.png\nLatte:latte.png\nMacchiato:macchiato.png\nBatik Stripe Blood Orange:batik-stripe-blood-orange.png\nBatik Stripe Navy:batik-stripe-navy.png\nBatik Stripe Lavender:batik-stripe-lavender.png\nBatik Stripe Sage:batik-stripe-sage.png\nBlack Flat Cotton:black-flat-cotton.png\nWhite Flat Cotton:white-flat-cotton.png\nMultimetallic: multimetallic.png\nIndigo:indigo.png\nBerry Blue Shibori:berry-blue-shibori.png\nIvory Colorscape:ivory-colorscape.png\nEventide Colorscape:eventide-colorscape.png\nBalsam Shibori:balsam-shibori.png\nWashed Indigo:washed-indigo.png\nOptic White:optic-white.png\nNatural White:natural-white.png\nUltramarine Line Shibor:ultramarine-line-shibor.png\nBrick Line Shibori:brick-line-shibori.png\nSparrow Irregular Dot:sparrow-irregular-dot.png\nBalsam/Ivory:balsam-ivory.png\nDark Brown Croc/Tobacco:dark-brown-croc-tobacco.png\nBerry Blue:berry-blue.png\nBalsam:balsam.png\nPeriwinkle:periwinkle.png\nBurnt:burnt.png\nBurgundy:burgundy.png\nBlood Red:blood-red.png\nCherry:cherry.png\nOcean:ocean.png\nTitanium:titanium.png\nLemonade:lemonade.png\nChamomile:chamomile.png\nVintage Flowers Sepia:vintage-flowers-sepia.png\nWater Lily Terracotta:water-lily-terracotta.png\nPeacock Ink:peacock-ink.png\nPeacock Currant:peacock-currant.png\nBlack Silk:black-silk.png\nPaisley Stripe Black:paisley-stripe-black.png\nBlack Patent:black-patent.png\nBlack and Stars:black-and-stars.png\nBurnt Umber:burnt-umber.png\nWild Pink Rose:wild-pink-rose.png\nPrinted Beige:printed-beige.png\nPrinted Caramel:printed-caramel.png\nBlack Studs:black-studs.png\nWhite Studs:white-studs.png\nPink Tartan:pink-tartan.png\nBlack Crystal:black-crystal.png\nBubblegum:bubblegum.png\nPink Wave:pink-wave.png\nRaffia Multicolor:raffia-multicolor.png\nNeutral Plaid:neutral-plaid.png\nBlack and Crystal:black-and-crystal.png\nGreen Tartan:green-tartan.png\nBlack Tweed:black-tweed.png\nBosco:bosco.png\nLeopard:leopard.png\nJungle:jungle.png\nMarlin:marlin.png\nShocking Pink:shocking-pink.png\nCinnamon:cinnamon.png\nIris:iris.png\nLatte:latte.png\nMidnight:midnight.png\nRose Agami:rose-agami.png\nCharcoal:charcoal.png\nCharcoal, Blush, Sand:charcoal-blush-sand.png\nCopper:copper.png\nCadet:cadet.png\nPutty:putty.png\nGarnet:garnet.png\nOmbre:ombre.png\nVerdelite:verdelite.png\nFloral:floral.png\nFringe Stellar:fringe-stellar.png\nOff White:off-white.png\nDress Blue:dress-blue.png\nCognac:cognac.png\nOyster Grey:oyster-grey.png\nDark Croco:dark-croco.png\nCrystal Black:crystal-black.png\nEmerald Shimmer:emerald-shimmer.png\nMushroom Grey:mushroom-grey.png\nDeep Olivine:deep-olivine.png\nPorcelain:porcelain.png\nCocoa:cocoa.png\nGalaxy:galaxy.png\nMoka:moka.png\nSandstone:sandstone.png\nSeaweed:seaweed-suede.png\nGreen and White Vertical Striped:green-and-white-striped.png\nEspresso and White Even Striped:espresso-even-stripes.png\nUmber:umber.png\nRaspberry:raspberry.png\nBluestone:bluestone.png\nAmarillo/ Taupe:amarillo-taupe.png\n Canela/ Natilla:canela-natilla.png\n Negro/ Habano:negro-habano.png\n Mostaza/ Negro:mostaza-negro.png\n Verde Hoja/ Ilusion blue:verde-hoja-ilusion-blue.png\n Verde Hoja/ Verde Hoja:verde-hoja-verde-hoja.png\n Verde Hoja/ Grey Violet:verde-hoja-grey-violet.png\nDark Green:dark-green.png\nOff-White:off-white.png\nLapis:lapis.png\nAmazonite:amazonite.png\nBlack/Crystal:black-with-crystal.png\nMarron:marron.png\nAntique Tan:antique-tan.png\nSerpentine:serpentine.png\nDeep Garnet:deep-garnet.png\nGrey Taupe:grey-taupe.png\nDark Red:dark-red.png\nGrey Mushroom:mushroom-grey.png",
+    "product_image_aspect_ratio": "square",
+    "show_secondary_image": true,
+    "show_vendor": true,
+    "product_title_max_lines": 2,
+    "product_card_text_font": "body",
+    "show_product_rating": false,
+    "show_quick_buy": false,
+    "show_sold_out_badge": false,
+    "show_discount": false,
+    "cart_type": "drawer",
+    "social_facebook": "https://facebook.com/Larroude-113356890576641",
+    "social_pinterest": "https://www.pinterest.com/larroude_/",
+    "social_instagram": "https://www.instagram.com/larroude",
+    "social_tiktok": "https://www.tiktok.com/@larroude.com?_t=8niJJarKkOD&_r=1",
+    "favicon": "shopify://shop_images/Favicon.png",
+    "checkout_logo_image": "shopify://shop_images/Logo_d8322c26-fa96-4dfc-9b3d-10a0dbce16b6.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "medium",
+    "checkout_accent_color": "#1c1c1c",
+    "checkout_button_color": "#000000",
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "13768625480086291342": {
+        "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "5149645339031002760": {
+        "type": "shopify://apps/order-limits-minmaxify/blocks/app-embed-block/3acfba32-89f3-4377-ae20-cbb9abc48475",
+        "disabled": false,
+        "settings": {
+          "async": false
+        }
+      },
+      "17428600031447253342": {
+        "type": "shopify://apps/attentive/blocks/attn-tag/8df62c72-8fe4-407e-a5b3-72132be30a0d",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "1877152918344802950": {
+        "type": "shopify://apps/intelligems-a-b-testing/blocks/intelligems-script/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "10904103357068823869": {
+        "type": "shopify://apps/85765dfd-opensend/blocks/opensend/12a415e3-e8e8-49d9-8a91-44049f18339f",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "1291562577487733835": {
+        "type": "shopify://apps/black-crow-ai-that-delivers/blocks/blackcrow_ai_script/3e73f597-cb71-47a1-8a06-0c931482ecd2",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "733389323033596483": {
+        "type": "shopify://apps/okendo/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "disabled": false,
+        "settings": {
+          "show_preview_data": true
+        }
+      },
+      "16548475241908962911": {
+        "type": "shopify://apps/oxi-social-login/blocks/social-login-embed/24ad60bc-8f09-42fa-807e-e5eda0fdae17",
+        "disabled": false,
+        "settings": {
+          "enabled_on_page": "all"
+        }
+      },
+      "7352412249316863832": {
+        "type": "shopify://apps/express-geo-redirect/blocks/geo_redirect/016c254f-a6c6-4d7d-8d13-4618dae27d13",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "11825749942329260384": {
+        "type": "shopify://apps/fueled-attribution-suite/blocks/fueled-embed/b7733e10-32a6-41fd-a62d-3195dc211aa9",
+        "disabled": false,
+        "settings": {
+          "track": true
+        }
+      }
+    },
+    "color_schemes": {
+      "scheme-1": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text_color": "#000000",
+          "primary_button_background": "#ffffff",
+          "primary_button_text_color": "#000000",
+          "circle_button_background": "#000000",
+          "circle_button_icon": "#ffffff"
+        }
+      },
+      "scheme-2": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text_color": "#000000",
+          "primary_button_background": "#000000",
+          "primary_button_text_color": "#ffffff",
+          "circle_button_background": "#1c1c1c",
+          "circle_button_icon": "#ffffff"
+        }
+      },
+      "scheme-3": {
+        "settings": {
+          "background": "#000000",
+          "background_gradient": "",
+          "text_color": "#ffffff",
+          "primary_button_background": "#ffffff",
+          "primary_button_text_color": "#000000",
+          "circle_button_background": "#ffffff",
+          "circle_button_icon": "#1c1c1c"
+        }
+      },
+      "scheme-4": {
+        "settings": {
+          "background": "rgba(0,0,0,0)",
+          "background_gradient": "",
+          "text_color": "#000000",
+          "primary_button_background": "#ffffff",
+          "primary_button_text_color": "#1c1c1c",
+          "circle_button_background": "#ffffff",
+          "circle_button_icon": "#1c1c1c"
+        }
+      },
+      "scheme-73d9fca8-b45f-4bd3-9762-4e8ea9d927aa": {
+        "settings": {
+          "background": "rgba(0,0,0,0)",
+          "background_gradient": "",
+          "text_color": "#ffffff",
+          "primary_button_background": "#ffffff",
+          "primary_button_text_color": "#000000",
+          "circle_button_background": "#000000",
+          "circle_button_icon": "#ffffff"
+        }
+      }
+    }
+  },
+  "presets": {
+    "Allure": {
+      "section_vertical_spacing": "md",
+      "heading_font": "univers_next_n4",
+      "heading_letter_spacing": 18,
+      "text_font": "univers_next_n4",
+      "text_font_size_desktop": 14,
+      "button_letter_spacing": 18,
+      "color_schemes": {
+        "scheme-1": {
+          "settings": {
+            "background": "#efefef",
+            "text_color": "#1c1c1c",
+            "primary_button_background": "#1c1c1c",
+            "primary_button_text_color": "#ffffff",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        },
+        "scheme-2": {
+          "settings": {
+            "background": "#ffffff",
+            "text_color": "#1c1c1c",
+            "primary_button_background": "#1c1c1c",
+            "primary_button_text_color": "#ffffff",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        },
+        "scheme-3": {
+          "settings": {
+            "background": "#1c1c1c",
+            "text_color": "#ffffff",
+            "primary_button_background": "#ffffff",
+            "primary_button_text_color": "#1c1c1c",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        },
+        "scheme-4": {
+          "settings": {
+            "background": "rgba(0,0,0,0)",
+            "text_color": "#ffffff",
+            "primary_button_background": "#ffffff",
+            "primary_button_text_color": "#1c1c1c",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        }
+      },
+      "success_color": "#307a07",
+      "warning_color": "#ed8a00",
+      "error_color": "#cb2b2b",
+      "product_rating_color": "#1c1c1c",
+      "product_on_sale_accent": "#e32c2b",
+      "product_sold_out_badge_background": "#efefef",
+      "product_custom_badge_background": "#1c1c1c"
+    },
+    "Couture": {
+      "section_vertical_spacing": "md",
+      "heading_font": "futura_n4",
+      "heading_letter_spacing": 18,
+      "text_font": "century_gothic_n4",
+      "text_font_size_desktop": 14,
+      "button_letter_spacing": 18,
+      "color_schemes": {
+        "scheme-1": {
+          "settings": {
+            "background": "#ffffff",
+            "text_color": "#5c5c5c",
+            "primary_button_background": "#5c5c5c",
+            "primary_button_text_color": "#ffffff",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        },
+        "scheme-2": {
+          "settings": {
+            "background": "#f3f3f3",
+            "text_color": "#5c5c5c",
+            "primary_button_background": "#5c5c5c",
+            "primary_button_text_color": "#ffffff",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#5c5c5c"
+          }
+        },
+        "scheme-3": {
+          "settings": {
+            "background": "#1c1c1c",
+            "text_color": "#ffffff",
+            "primary_button_background": "#ffffff",
+            "primary_button_text_color": "#1c1c1c",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        },
+        "scheme-4": {
+          "settings": {
+            "background": "rgba(0,0,0,0)",
+            "text_color": "#ffffff",
+            "primary_button_background": "#ffffff",
+            "primary_button_text_color": "#1c1c1c",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        }
+      },
+      "success_color": "#307a07",
+      "warning_color": "#ed8a00",
+      "error_color": "#cb2b2b",
+      "product_rating_color": "#1c1c1c",
+      "product_on_sale_accent": "#e32c2b",
+      "product_sold_out_badge_background": "#efefef",
+      "product_custom_badge_background": "#1c1c1c"
+    },
+    "Vogue": {
+      "section_vertical_spacing": "xs",
+      "heading_font": "din_neuzeit_grotesk_n3",
+      "heading_letter_spacing": 18,
+      "text_font": "futura_n4",
+      "text_font_size_desktop": 14,
+      "button_letter_spacing": 18,
+      "color_schemes": {
+        "scheme-1": {
+          "settings": {
+            "background": "#ffffff",
+            "text_color": "#303030",
+            "primary_button_background": "#f5db8b",
+            "primary_button_text_color": "#303030",
+            "circle_button_background": "#1c1c1c",
+            "circle_button_icon": "#f5db8b"
+          }
+        },
+        "scheme-2": {
+          "settings": {
+            "background": "#ffffff",
+            "text_color": "#303030",
+            "primary_button_background": "#f5db8b",
+            "primary_button_text_color": "#303030",
+            "circle_button_background": "#1c1c1c",
+            "circle_button_icon": "#f5db8b"
+          }
+        },
+        "scheme-3": {
+          "settings": {
+            "background": "#1c1c1c",
+            "text_color": "#ffffff",
+            "primary_button_background": "#ffffff",
+            "primary_button_text_color": "#1c1c1c",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        },
+        "scheme-4": {
+          "settings": {
+            "background": "rgba(0,0,0,0)",
+            "text_color": "#ffffff",
+            "primary_button_background": "#ffffff",
+            "primary_button_text_color": "#1c1c1c",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        }
+      },
+      "success_color": "#307a07",
+      "warning_color": "#ed8a00",
+      "error_color": "#cb2b2b",
+      "product_rating_color": "#1c1c1c",
+      "product_on_sale_accent": "#e32c2b",
+      "product_sold_out_badge_background": "#efefef",
+      "product_custom_badge_background": "#1c1c1c"
+    }
+  }
+}

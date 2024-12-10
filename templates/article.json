@@ -1,0 +1,54 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "color_scheme": "",
+        "show_image": true,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "content_width": "xs",
+        "show_date": false,
+        "show_category": false,
+        "show_author": true,
+        "show_share_buttons": false,
+        "show_sticky_bar": false,
+        "toolbar_color_scheme": ""
+      }
+    },
+    "prev-next-blog-posts": {
+      "type": "prev-next-blog-posts",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": true,
+        "subheading": "",
+        "title": "Read more",
+        "show_category": false,
+        "show_excerpt": false,
+        "show_read_more": true
+      }
+    },
+    "recently_viewed_products_n7GGzJ": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "separate_section_with_border": true,
+        "color_scheme": "",
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_count": 9,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "",
+        "title": "Recently viewed products",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "prev-next-blog-posts",
+    "recently_viewed_products_n7GGzJ"
+  ]
+}

@@ -1,0 +1,145 @@
+{{ 'component-drawer-menu.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'component-drawer-menu.js' | asset_url }}" defer="defer"></script>
+
+<drawer-menu class="drawer-menu drawer-hidden">
+  <header-sidebar-collapsible-panel class="drawer-menu__collapsible-panel" slot="collapsible-panel">
+    <ul class="unstyled-list">
+      {%- for link in menu.links -%}
+        <li class="category-item">
+          {%- if link.links.size > 0 -%}
+            <div id="header-panel-{{ forloop.index }}" class="header-sidebar__sub-panel container">
+              <details is="accordion-disclosure" class="group">
+                <summary class="header-sidebar__linklist-button">
+                  <span {% if link_text == link.title %}style="color: {{ section.settings.color }}"{% endif %}>{{ link.title }}</span>
+                  <span class="icon-toggle">
+                    {%- render 'icon' with 'plus', width: 12, direction_aware: true -%}
+                    {%- render 'icon' with 'minus', width: 12, direction_aware: true -%}
+                  </span>
+                </summary>
+
+                <ul class="header-sidebar__nested-linklist unstyled-list" role="list">
+                  {%- for sub_link in link.links -%}
+                    <li>
+                      {%- if sub_link.links.size > 0 -%}
+                        <details is="accordion-disclosure" class="group">
+                          <summary>
+                            {{ sub_link.title }}
+                            <span class="icon-toggle">
+                              {%- render 'icon' with 'plus', width: 12, direction_aware: true -%}
+                              {%- render 'icon' with 'minus', width: 12, direction_aware: true -%}
+                            </span>
+                          </summary>
+
+                          <div class="header-sidebar__nested-linklist">
+                            {%- for sub_sub_link in sub_link.links -%}
+                              <a href="{{ sub_sub_link.url }}" class="link-faded-reverse">{{ sub_sub_link.title }}</a>
+                            {%- endfor -%}
+                          </div>
+                        </details>
+                      {%- else -%}
+                        <a href="{{ sub_link.url }}">
+                          {{ sub_link.title }}
+                        </a>
+                      {%- endif -%}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </details>
+            </div>
+          {%- else -%}
+          <div class="container">
+            <a href="{{ link.url }}" class="header-sidebar__linklist-button">
+              <span {% if link_text == link.title %}style="color: {{ section.settings.color }}"{% endif %}>{{ link.title }}</span>
+            </a>
+          </div>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+      <li class="category-item">
+        <div class="container">
+          <a href="{{ routes.account_url }}" class="header-sidebar__linklist-button">
+            <span>
+                {{ 'header.general.account' | t | upcase }}
+            </span>
+          </a>
+        </div>
+      </li>
+    </ul>
+    {% if featured_image != blank and featured_title != blank and featured_link != blank %}
+      <a href="{{ featured_link }}" class="container drawer-menu__featured-image">
+        {{ featured_image | image_url: width: 500 | image_tag: alt: featured_title }}
+        <p class="bold">{{ featured_title }}</p>
+      </a>
+    {% endif %}
+  </header-sidebar-collapsible-panel>
+  <div class="color-scheme color-scheme--scheme-3 drawer-menu__footer">
+    {% if helper_menu != blank or about_menu != blank %}
+      <div class="container h-stack justify-between gap-2 align-start drawer-menu__links">
+        {%- if helper_menu != blank and helper_menu.links.size > 0 -%}
+          <div class="v-stack gap-2.5 grow">
+            <p class="bold">{{ helper_menu.title }}</p>
+
+            <ul class="v-stack gap-2.5 unstyled-list" role="list">
+              {%- for link in helper_menu.links -%}
+                <a href="{{ link.url }}" class="link-faded-reverse">{{ link.title }}</a>
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+        {%- if about_menu != blank and about_menu.links.size > 0 -%}
+          <div class="v-stack gap-2.5 grow">
+            <p class="bold">{{ about_menu.title }}</p>
+
+            <ul class="v-stack gap-2.5 unstyled-list" role="list">
+              {%- for link in about_menu.links -%}
+                <a href="{{ link.url }}" class="link-faded-reverse">{{ link.title }}</a>
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+      </div>
+    {% endif %}
+    {% if track_order_link != blank and track_order_text != blank %}
+      <div class="text-center justify-center drawer-menu__extra-links">
+        <a href="{{ track_order_link }}" class="bold" target="_blank">{{ track_order_text }}</a>
+      </div>
+    {% endif %}
+    <div class="text-center justify-self-center drawer-menu__extra-links">
+      {% render 'social-media' %}
+    </div>
+    <div class="drawer-menu__extra-links v-stack text-center gap-4">
+      {%- if show_country_selector or show_locale_selector -%}
+        <div class="localization-selectors">
+          {%- if show_country_selector -%}
+            {%- render 'localization-selector',
+              type: 'country',
+              placement: 'top-start',
+              show_country_name: section.settings.show_country_name,
+              show_country_flag: section.settings.show_country_flag,
+              id_prefix: 'header-sidebar'
+            -%}
+          {%- endif -%}
+
+          {%- if show_country_selector and show_locale_selector -%}
+            <span class="localization-selectors__separator" aria-hidden="true"></span>
+          {%- endif -%}
+
+          {%- if show_locale_selector -%}
+            {%- render 'localization-selector', type: 'locale', placement: 'top-start', id_prefix: 'header-sidebar' -%}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      <p class="copyright text-xs">© {{ 'now' | date: '%Y' }} - {{ shop.name }}</p>
+
+      {%- if legal_menu -%}
+        <div class="legal-menu h-stack gap-2.5 unstyled-list text-xs wrap justify-center">
+          {%- for link in legal_menu.links -%}
+            <a href="{{ link.url }}" aria-label="Redirect to {{ link.title }}">{{ link.title }}</a>
+          {%- endfor -%}
+          <span data-acsb-custom-trigger="true">{{ 'general.accessibility.settings' | t }}</span>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+  <div class="overlay hidden"></div>
+</drawer-menu>

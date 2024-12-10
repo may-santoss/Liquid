@@ -1,0 +1,278 @@
+{
+  "sections": {
+    "282db6e8-57da-41b5-944a-69379c201694": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16491212177574__282db6e8-57da-41b5-944a-69379c201694-subheading-1": {
+          "type": "subheading",
+          "settings": {
+            "text": "Subheading"
+          }
+        },
+        "template--16491212177574__282db6e8-57da-41b5-944a-69379c201694-heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Image with text",
+            "heading_tag": "h1"
+          }
+        },
+        "template--16491212177574__282db6e8-57da-41b5-944a-69379c201694-richtext-1": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16491212177574__282db6e8-57da-41b5-944a-69379c201694-subheading-1",
+        "template--16491212177574__282db6e8-57da-41b5-944a-69379c201694-heading-1",
+        "template--16491212177574__282db6e8-57da-41b5-944a-69379c201694-richtext-1"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify:\/\/shop_images\/DSCF2472_c4e3fadf-3b4b-479b-9a61-4b48488a17ea.jpg",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
+    },
+    "d03e4645-35e9-4f89-be9d-faffa78cb406": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16491212177574__d03e4645-35e9-4f89-be9d-faffa78cb406-subheading-1": {
+          "type": "subheading",
+          "settings": {
+            "text": "Subheading"
+          }
+        },
+        "template--16491212177574__d03e4645-35e9-4f89-be9d-faffa78cb406-heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Heading",
+            "heading_tag": "h1"
+          }
+        },
+        "template--16491212177574__d03e4645-35e9-4f89-be9d-faffa78cb406-richtext-1": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16491212177574__d03e4645-35e9-4f89-be9d-faffa78cb406-subheading-1",
+        "template--16491212177574__d03e4645-35e9-4f89-be9d-faffa78cb406-heading-1",
+        "template--16491212177574__d03e4645-35e9-4f89-be9d-faffa78cb406-richtext-1"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "xs",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    },
+    "70520299-efec-475b-b919-7eaae3b671d5": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16491212177574__70520299-efec-475b-b919-7eaae3b671d5-subheading-1": {
+          "type": "subheading",
+          "settings": {
+            "text": "Subheading"
+          }
+        },
+        "template--16491212177574__70520299-efec-475b-b919-7eaae3b671d5-heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Image with text",
+            "heading_tag": "h1"
+          }
+        },
+        "template--16491212177574__70520299-efec-475b-b919-7eaae3b671d5-richtext-1": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16491212177574__70520299-efec-475b-b919-7eaae3b671d5-subheading-1",
+        "template--16491212177574__70520299-efec-475b-b919-7eaae3b671d5-heading-1",
+        "template--16491212177574__70520299-efec-475b-b919-7eaae3b671d5-richtext-1"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify:\/\/shop_images\/larroude-41811.jpg",
+        "reveal_on_scroll": true,
+        "image_position": "end",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "show_image": true,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "content_width": "xs",
+        "show_date": false,
+        "show_category": false,
+        "show_author": true,
+        "show_share_buttons": false,
+        "show_sticky_bar": false,
+        "toolbar_color_scheme": ""
+      }
+    },
+    "prev-next-blog-posts": {
+      "type": "prev-next-blog-posts",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "subheading": "",
+        "title": "Read more",
+        "show_category": false,
+        "show_excerpt": false,
+        "show_read_more": true
+      }
+    },
+    "f9534ee8-da19-4270-b55e-4bf1fa5d1fb7": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--16491212177574__f9534ee8-da19-4270-b55e-4bf1fa5d1fb7-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "larroude-collabs",
+            "products_count": 8,
+            "title": "Favorites",
+            "link_url": "",
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "template--16491212177574__f9534ee8-da19-4270-b55e-4bf1fa5d1fb7-collection-1"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "742aa3c4-f871-40a6-842e-e696969e4d52": {
+      "type": "media-grid",
+      "blocks": {
+        "template--16491212177574__742aa3c4-f871-40a6-842e-e696969e4d52-image-1": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify:\/\/shop_images\/GBCR2322.jpg",
+            "column_count": "6",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "template--16491212177574__742aa3c4-f871-40a6-842e-e696969e4d52-image-2": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify:\/\/shop_images\/SQUARE-MOBILE_pumps_4c72244d-a8ee-48cd-910e-3d156d5dacae.jpg",
+            "column_count": "3",
+            "row_count": 1,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "template--16491212177574__742aa3c4-f871-40a6-842e-e696969e4d52-image-3": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify:\/\/shop_images\/KT047_BLK_LS1.jpg",
+            "column_count": "3",
+            "row_count": 1,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "74aefc43-cd2e-48b4-ba29-a9fad180dae6": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify:\/\/shop_images\/larroude-0199.jpg",
+            "column_count": "6",
+            "row_count": 1,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--16491212177574__742aa3c4-f871-40a6-842e-e696969e4d52-image-1",
+        "template--16491212177574__742aa3c4-f871-40a6-842e-e696969e4d52-image-2",
+        "template--16491212177574__742aa3c4-f871-40a6-842e-e696969e4d52-image-3",
+        "74aefc43-cd2e-48b4-ba29-a9fad180dae6"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "desktop_row_height": 290,
+        "mobile_row_height": 180,
+        "section_width": "lg",
+        "spacing": "md",
+        "subheading": "",
+        "title": "",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "282db6e8-57da-41b5-944a-69379c201694",
+    "d03e4645-35e9-4f89-be9d-faffa78cb406",
+    "70520299-efec-475b-b919-7eaae3b671d5",
+    "main",
+    "prev-next-blog-posts",
+    "f9534ee8-da19-4270-b55e-4bf1fa5d1fb7",
+    "742aa3c4-f871-40a6-842e-e696969e4d52"
+  ]
+}

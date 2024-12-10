@@ -1,0 +1,42 @@
+<input type="hidden" id="embroideryVariant" value="{{ settings.embroidery_variant }}">
+<div class="product-info__embroidery v-stack justify-between gap-2{% unless product.selected_or_first_available_variant.option3 == settings.embroidery_variant %} hidden{% endunless %}" id="Embroidery-Selected">
+  <div class="v-stack gap-2">
+    <label class="label">{{ 'product.embroidery.first_initial' | t }}</label>
+    <input type="text" name="properties[First Initial]" id="first_initial" class="input" maxlength="1" minlength="1">
+    <div class="text-error text-xs hidden">'{{ 'product.embroidery.first_initial' | t }}' {{ 'product.embroidery.required' | t }}</div>
+  </div>
+
+  <div class="v-stack gap-2">
+    <label class="label">{{ 'product.embroidery.second_initial' | t }}</label>
+    <input type="text" name="properties[Second Initial]" id="second_initial" class="input"  maxlength="1" minlength="1">
+    <div class="text-error text-xs hidden">'{{ 'product.embroidery.second_initial' | t }}' {{ 'product.embroidery.required' | t }}</div>
+  </div>
+
+  {% assign threadcolors = settings.thread_colors | split: ',' %}
+  <div class="v-stack gap-2">
+    <label class="label">{{ 'product.embroidery.thread_color' | t }} <variant-thread-value>{{ threadcolors[0] }}</variant-thread-value></label>
+    <div class="h-stack gap-2.5 wrap">
+      {% for color_name in threadcolors %}
+        <input type="radio" class="sr-only" name="properties[Thread Color]" value="{{ color_name }}" id="embroidery-thread-color-value-{{ forloop.index }}">
+        <label class="color-swatch" for="embroidery-thread-color-value-{{ forloop.index }}">
+          {% assign file_name = color_name | replace: " ", "_" | append: '.jpg' %}
+          {{ file_name | file_url | img_tag: color_name }}
+        </label>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+var threadColorRadios = document.querySelectorAll('[name="properties[Thread Color]"]')
+var prev = null;
+for (var i = 0; i < threadColorRadios.length; i++) {
+  threadColorRadios[i].addEventListener('change', function() {
+        (prev) ? console.log(prev.value): null;
+        if (this !== prev) {
+            prev = this;
+        }
+        document.querySelector('variant-thread-value').innerHTML = this.value
+    });
+}
+</script>

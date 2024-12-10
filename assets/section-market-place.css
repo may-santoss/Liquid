@@ -1,0 +1,120 @@
+.shop-by__vendors {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0 50px;
+  gap: 20px 10px;
+}
+
+.shop-by__vendors .shop-by__item {
+  aspect-ratio: 4 / 5;
+  width: calc(33% - 6px);
+}
+
+.shop-by__item-title-container {
+  height: 100%;
+}
+
+.shop-by__vendors .shop-by__item img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.shop-by__item-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #ececec;
+  font-size: 4rem;
+  line-height: 1;
+  color: white;
+}
+
+.shop-by__item-image .h4 {
+  margin-top: 10px;
+  display: block;
+  line-height: 1;
+  text-align: center;
+}
+
+.shop-by__letters {
+  grid: 1fr / auto-flow 50px;
+  gap: 0;
+  display: grid;
+  position: relative;
+  padding: 0 max(var(--container-gutter), 50% - var(--container-max-width) / 2) 20px;
+  margin: auto;
+  max-width: var(--container-max-width);
+}
+
+.shop-by__letters a {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  transition: .3s;
+  line-height: 1;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--heading-font-family);
+}
+
+.shop-by__letters a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.shop-by__letters a:not(:first-child) {
+  border-left: 0;
+}
+
+.shop-by__letters a[disabled] {
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.shop-by__navigation {
+  position: sticky;
+}
+
+.shop-by__letters {
+  position: sticky;
+  padding: 0;
+  background-color: white;
+  top: 55px;
+}
+
+@media screen and (min-width: 768px) {
+  .shop-by__vendors .shop-by__item {
+    width: calc(33% - 11px);
+  }
+
+  .shop-by__vendors {
+    gap: 40px 10px;
+  }
+
+  .shop-by__item-title {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .shop-by__vendors .shop-by__item {
+    width: calc(25% - 8px);
+  }
+
+  .shop-by__item-title {
+    font-size: 8rem;
+  }
+
+  .shop-by__vendors .shop-by__item,
+  .shop-by__vendors .shop-by__item img {
+    aspect-ratio: 1;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .shop-by__letters {
+    top: 67px;
+  }
+}

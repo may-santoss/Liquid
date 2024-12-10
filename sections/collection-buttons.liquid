@@ -1,0 +1,82 @@
+{%- if collection.handle == 'unique-sale' -%}
+<div class="floating-controls-container bleed align-start">
+  <scroll-carousel id="size-buttons-{{ section.id }}" group-cells allow-drag class="collection-button__slider gap-4 full-bleed h-stack scroll-area is-scrollable">
+    {% assign sizes = "5,5.5,6,6.5,7,7.5,8,8.5,9,9.5,10,11" | split: ',' %}
+    {% assign links = "https://larroude.com/collections/unique-sale?filter.v.availability=1&filter.v.option.size=5.0,https://larroude.com/collections/unique-sale?filter.v.availability=1&filter.v.option.size=5.5,https://larroude.com/collections/unique-sale?filter.v.availability=1&filter.v.option.size=6.0,https://larroude.com/collections/unique-sale?filter.v.availability=1&filter.v.option.size=6.5,https://larroude.com/collections/unique-sale?filter.v.availability=1&filter.v.option.size=7.0,https://larroude.com/collections/unique-sale?filter.v.availability=1&filter.v.option.size=7.5,https://larroude.com/collections/unique-sale?filter.v.availability=1&filter.v.option.size=8.0,https://larroude.com/collections/unique-sale?filter.v.availability=1&filter.v.option.size=8.5,https://larroude.com/collections/unique-sale?filter.v.availability=1&filter.v.option.size=9.0,https://larroude.com/collections/unique-sale?filter.v.availability=1&filter.v.option.size=9.5,https://larroude.com/collections/unique-sale?filter.v.availability=1&filter.v.option.size=10.0,https://larroude.com/collections/unique-sale?filter.v.availability=1&filter.v.option.size=11.0" | split: ',' %}
+    {% assign images = "SIZESALE_CAROUSEL5.jpg,SIZESALE_CAROUSEL5.5.jpg,SIZESALE_CAROUSEL_02_SQUARE.jpg,SIZESALE_CAROUSEL_03_SQUARE.jpg,SIZESALE_CAROUSEL_04_SQUARE.jpg,Size.7.5.jpg,size8.jpg,SIZESALE_CAROUSEL_07_SQUARE.jpg,SIZESALE_CAROUSEL_08_SQUARE_.jpg,SIZESALE_CAROUSEL_09_SQUARE.jpg,SIZESALE_CAROUSEL_10_SQUARE.jpg,SIZESALE_CAROUSEL_11.jpg" | split: ',' %}
+
+    {% for i in (0..sizes.size) %}
+      {% if sizes[i] and links[i] and images[i] %}
+        {% assign size = sizes[i] %}
+        {% assign link = links[i] %}
+        {% assign image = images[i] %}
+        <div class="h-stack">
+          <a href="{{ link }}" class="collection-button v-stack gap-3" aria-label="Size {{ size }}">
+            <img src="{{ image | asset_url }}" alt="Size {{ size }}" class="aspect-square object-cover" />
+            <div class="link">            
+             Sale - Size {{ size }}
+            </div>
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </scroll-carousel>
+
+  <button is="carousel-prev-button" type="button" class="prev-next-button prev-next-button--prev circle-button circle-button--lg" disabled aria-controls="size-buttons-{{ section.id }}">
+    <span class="sr-only">{{ 'general.accessibility.previous' | t }}</span>
+    {%- render 'icon' with 'arrow-left', direction_aware: true -%}
+  </button>
+
+  <button is="carousel-next-button" type="button" class="prev-next-button prev-next-button--next circle-button circle-button--lg" aria-controls="size-buttons-{{ section.id }}">
+    <span class="sr-only">{{ 'general.accessibility.next' | t }}</span>
+    {%- render 'icon' with 'arrow-right', direction_aware: true -%}
+  </button>
+</div>
+{%- else -%}
+  {%- if collection.metafields.related_collections.collections != blank -%}
+  <div class="floating-controls-container bleed align-start">
+    <scroll-carousel id="collection-buttons-{{ section.id }}" group-cells allow-drag class="collection-button__slider gap-4 full-bleed h-stack scroll-area is-scrollable">
+      {% for collection in collection.metafields.related_collections.collections.value %}
+      <div class="h-stack">
+        <a href="{{ collection.url }}" class="collection-button v-stack gap-3" aria-label="Redirect {{ collection.url }}">
+          {% liquid
+            assign collection_image = collection.featured_image
+            if collection.metafields.related_collections.image != blank
+              assign collection_image = collection.metafields.related_collections.image
+            endif 
+          %}
+          {{ collection_image | img_url: '400x' | img_tag: collection.title, 'aspect-square object-cover' }}
+          <div class="link">            
+            {{ collection.title }}
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </scroll-carousel>
+
+    <button is="carousel-prev-button" type="button" class="prev-next-button prev-next-button--prev circle-button circle-button--lg" disabled aria-controls="collection-buttons-{{ section.id }}">
+      <span class="sr-only">{{ 'general.accessibility.previous' | t }}</span>
+      {%- render 'icon' with 'arrow-left', direction_aware: true -%}
+    </button>
+
+    <button is="carousel-next-button" type="button" class="prev-next-button prev-next-button--next circle-button circle-button--lg" aria-controls="collection-buttons-{{ section.id }}">
+      <span class="sr-only">{{ 'general.accessibility.next' | t }}</span>
+      {%- render 'icon' with 'arrow-right', direction_aware: true -%}
+    </button>
+  </div>
+  {%- endif -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Collection buttons",
+  "class": "shopify-section--collection-buttons container",
+  "tag": "section",
+  "templates": ["collection"],
+  "presets": [
+    {
+      "name": "Collection buttons"
+    }
+  ]
+}
+{% endschema %}

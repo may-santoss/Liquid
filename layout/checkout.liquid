@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+  <meta name="referrer" content="origin">
+
+  <title>{{ page_title }}</title>
+  
+  <script>
+     
+    var query = window.location.search.substring(1)
+      if(query.length) {
+         if(window.history != undefined && window.history.pushState != undefined) {
+            window.history.pushState({}, document.title, window.location.pathname);
+         }
+      }
+   
+  </script>
+  {{ content_for_header }}
+  
+
+  {{ checkout_stylesheets }}
+
+  {{ 'checkout-qr-credit.css' | asset_url | stylesheet_tag }}
+  {{ checkout_scripts }}
+  <script src="{{ 'credit.js' | asset_url }}"></script>
+<script>
+  
+</script>
+  {%- comment -%}
+  {%- endcomment -%}
+ 
+  
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "o29f0iibyx");
+</script>
+</head>
+
+<body>
+  
+  {% assign discount = "SPECIAL" %}
+  <!-- End of managed code -->
+  {{ skip_to_content_link }}
+
+  <header class="banner" data-header role="banner">
+    <div class="wrap">
+      {{ content_for_logo }}
+    </div>
+  </header>
+
+  {{ order_summary_toggle }}
+
+  <div id="UAS"></div>
+  
+    <script>
+      var req = new XMLHttpRequest();
+req.open('GET', document.location, false);
+req.send(null);
+var headers = req.getAllResponseHeaders().toLowerCase();
+ // document.getElementById("UAS").innerHTML = headers;  
+</script>
+  <div  class="content" data-content>
+    <div class="wrap">
+      <div class="main">
+        <header class="main__header" role="banner">
+          {{ content_for_logo }}
+          {{ breadcrumb }}
+            
+          
+          
+          {{ alternative_payment_methods }}
+        </header>
+        <main class="main__content" role="main">
+          {{ content_for_layout }}
+        </main>
+        <footer class="main__footer" role="contentinfo">
+          {{ content_for_footer }}
+        </footer>
+      </div>
+      <aside class="sidebar" role="complementary">
+        <div class="sidebar__header">
+          {{ content_for_logo }}
+        </div>
+        <div class="sidebar__content">
+          <div style="color:red;font-size:14px;" id="false_credit"></div>
+          {% if customer %}
+          <div class="qr_credit_container">
+            <div class="abonded_checkout hide">
+              <form accept-charset="UTF-8" action="https://larroude.com/a/s/users/reset_abonded_credit" id="credit_reset_form"
+                method="post">
+            <div class="abonded_checkout_box">
+              <p style="text-align: left;">You have applied your credits in a previous checkout. If you did not complete that purchase, you can retrieve your credits by clicking on the reset button below.</p>
+              
+                <input name="form_type" type="hidden" value="credit" />
+                <input name="utf8" type="hidden" value="✓" />
+                <input type="hidden" name="shopify_user_id" value="{{customer.id}}">
+                <input type="hidden" value="{{request.path | split: "/" | last}}" name="qrcheckout_token">
+                <!--code for input fields and labels-->
+                <input type="hidden" value="{{request.path}}" name="url">
+                </div>
+              <button type="submit" class="btn  reset_button reset_checkout_credit">Reset Credits</button>
+              </form>
+            </div>
+            <div class="qr_credit_info">
+              Total available credits to use: <span class='qr_credit_amount'><span class="loader"></span></span>
+            </div>
+            <div class="qr_credit_form">
+              {% assign mydiscount_checked = checkout.discount_applications | first %}
+              {% if mydiscount_checked.title contains 'Credit'%}
+              <form accept-charset="UTF-8" action="https://larroude.com/a/s/users/remove_credit" id="credit"
+                method="post">
+                <input name="form_type" type="hidden" value="credit" />
+                <input name="utf8" type="hidden" value="✓" />
+                <input type="hidden" name="shopify_user_id" value="{{customer.id}}">
+                <input type="hidden" value="{{request.path | split: "/" | last}}" name="qrcheckout_token">
+                <!--code for input fields and labels-->
+                <input type="hidden" value="{{request.path}}" name="url">
+                <button class="btn" style="background-color:#e32c2b !important;" type="submit">Remove Credits</button>
+
+              </form>
+              {%else%}
+              <form accept-charset="UTF-8" action="https://larroude.com/a/s/users/apply_credit" id="credit"
+                method="post">
+                <input name="form_type" type="hidden" value="credit" />
+                <input name="utf8" type="hidden" value="✓" />
+                <input type="hidden" name="shopify_user_id" value="{{customer.id}}">
+                <input type="hidden" name="subtotal" value="{{ checkout.line_items_subtotal_price }}">
+                <input type="hidden" value="{{request.path | split: " /" | last}}" name="qrcheckout_token">
+                <!--code for input fields and labels-->
+                <input type="hidden" value="{{request.path}}" name="url">
+                <button class="btn" style="background-color:#66c490 !important;" type="submit">Apply Credits</button>
+
+              </form>
+              {%endif%}
+
+            </div>
+          </div>
+          {% else %}
+          <div class="qr_credit_container">
+            <h2 class="section__title">PLEASE LOGIN TO REDEEM YOUR CREDITS</h2>            
+          </div>
+
+          {% endif %}
+          </div>
+          {% assign delivery_note = '
+        <div class="delivery_note hide"><b>Please note: orders shipped outside of
+          the Continental U.S. are FINAL SALE.</b></div>' %}
+          {{ content_for_order_summary | replace: "SPECIAL", "$20 Off" | replace: 'REFER_QR_CODE_DISCOUNT','REFER QR DISCOUNT'| append:delivery_note}}
+        </aside>
+    </div>
+     
+  </div>
+        
+
+  {{ tracking_code }}
+  <div id="myModal" class="my_modal" style="display:none !important;">
+
+  <!-- Modal content -->
+  <div class="my_modal-content" style="display:none !important;">
+    <span class="close">&times;</span><br>
+    <p class="popup_checkout_text pct1">If you have credits to apply towards your purchase, please follow the steps below:</p>
+<p class="popup_checkout_text pct2">1 - Make sure you are logged in your account</p>
+<p class="popup_checkout_text pct3">2 - Apply your credits by clicking on the green button (top right side of the page) before selecting a payment method or express checkout option</p>
+ 
+    {% if customer %}
+    <div class="link_btn">
+  <a href="JavaScript:void(0);" class="closeit btn_link">Ok</a>
+    </div>
+{% else %}
+
+  <div class="link_btn">
+  <a href="https://larroude.com/account/login?checkout_url=https://larroude.com{{request.path}}" class="btn_link">Login</a>
+  </div>
+    {% endif %}
+
+</div>
+  </div>
+        
+        {% assign userAgent = request.headers['User-Agent'] %}
+        {% if userAgent contains 'Tapcart' %}
+          
+      <script>
+        
+alert('not from tapcart');
+
+          </script>
+
+        {% endif %}
+        
+</body>
+
+  <script>
+      var total_el = document.querySelector(".order-summary__section--total-lines");
+      var delivery_note = document.createTextNode("Please note: orders shipped outside of the Continental U.S. are FINAL SALE.");
+      var new_div = document.createElement('div');
+      new_div.className = "devliery_note";
+      new_div.style.fontWeight = "900";
+      new_div.appendChild(delivery_note);
+      // total_el.after(new_div);
+    
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
+      var closeit = document.getElementsByClassName("closeit")[0];
+      
+      if(!sessionStorage.getItem('firstVisit')) {  
+        modal.style.display = "block";
+        sessionStorage.setItem('firstVisit',true);
+      }    // show modal if it first time
+  
+          
+        
+      span.onclick = function() {
+        modal.style.display = "none";
+        sessionStorage.setItem('firstVisit',true);
+      }
+      closeit.onclick = function() {
+        modal.style.display = "none";
+        sessionStorage.setItem('firstVisit',true);
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          sessionStorage.setItem('firstVisit',true);
+        }
+      }
+      document.getElementById("checkout_reduction_code").placeholder = "Gift card or dicount code";
+  </script>
+
+  {% comment %}
+    International Checkout Disclaimer code added by WIP
+  {% endcomment %}
+  <style>
+    .disclaimer-text {
+      font-weight: 400;
+      font-size: 0.95em;
+    }
+    
+    .disclaimer-text a {
+      color: -webkit-link;
+    }
+    
+    .disclaimer-input__wrapper {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button[disabled] { opacity: 0.5; }
+  </style>
+
+  <script>
+    (function($) {
+      const renderDisclaimer = function() {
+        const $address = document.querySelector('address');
+        
+        if(!$address) return setTimeout(renderDisclaimer, 750);
+        
+        const unitedStatesExp = /(United States|US|USA)/ig;
+        const HiExp = /(HI+\s|Hawaii)/ig;
+        const AlaskaExp = /(Alaska|AK+\s)/ig;
+        
+        const isContinentalAddr = unitedStatesExp.test($address.textContent) && (!HiExp.test($address.textContent) && !AlaskaExp.test($address.textContent));
+        
+        // Shipping to Continental US. No need for extra disclaimer
+        if(isContinentalAddr) return;
+        
+        const $stepFooter = document.querySelector('.step__footer');
+        const $stepFooterSubmit = $stepFooter.querySelector('button[type="submit"]');
+        const $wrapper = document.createElement('div');
+        
+        $wrapper.classList += 'section section--terms shown-if-js';
+        
+        $wrapper.innerHTML = `
+            <div class="section__header">
+              <h2 class="section__title">Return Policy</h2>
+            </div>
+
+            <div class="section__content">
+              <div class="content-box">
+
+                <div class="content-box__row">
+                  <div class="checkbox-wrapper disclaimer-input__wrapper">
+                    <div class="checkbox__input">
+                      <input autocomplete="off" size="30" type="hidden" value="false" name="checkout[international_terms_accepted]">
+                      <input name="checkout[international_terms_accepted]" type="hidden" value="0" autocomplete="off">
+                      <input class="input-checkbox" aria-controls="section--international_terms" type="checkbox" value="1" name="checkout[international_terms_accepted]" id="checkout_international_terms">
+                    </div> 
+
+                    <label class="checkbox__label content-box__emphasis" for="checkout_international_terms">
+                        <p class="disclaimer-text">All orders outside of the continental United States are final sale.  Check this box to accept and complete your order. <a style="text-decoration: underline" href="https://larroude.com/pages/return-policy">Read Our Full Return Policy</a></p>
+                    </label>          
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+    `;
+        
+        
+        $stepFooter.parentNode.insertBefore($wrapper, $stepFooter);
+        
+        $stepFooterSubmit.disabled = true;
+        
+        $wrapper.querySelector('input[type="checkbox"]').addEventListener('change', function(event) {
+          $stepFooterSubmit.disabled = !event.target.checked;
+        });
+        
+      }
+      
+      $(document).on("page:load page:change", function() {
+        // We only will display the disclaimer during Payment method.
+        if (Shopify.Checkout.step !== "payment_method")return
+        
+        renderDisclaimer();
+
+      });
+      
+    })(Checkout.$);
+    if (document.getElementsByClassName("product__description__property")[0]){
+    var property_pre = document.getElementsByClassName("product__description__property")[0].innerHTML;
+      if(property_pre.includes("is_preorder")){
+        document.getElementsByClassName("product__description__property")[0].innerHTML='Pre-order item';
+      }
+    }
+    
+    if(window.location.hash == '#credit_false'){
+      document.querySelector('#false_credit').innerHTML='Credits given for first time customers can only be applied towards orders over $100';
+    }
+
+    if(Shopify.Checkout.step=='shipping_method'){
+      if(document.getElementsByClassName("product__description__property")[0]){
+      var property_pretext = document.getElementsByClassName("product__description__property")[0].innerHTML;
+        if(property_pretext.includes("Pre-order")){
+          document.getElementsByClassName("section--shipping-method")[0].insertAdjacentHTML('afterend', '<div style="margin-top:10px;">Please note shipping times vary for pre-order items.</div>');
+        }
+      }
+    }
+  </script>
+</html>
